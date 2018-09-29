@@ -46,8 +46,7 @@ static ssize_t dev_read(struct file *filep, char *buffer, size_t len, loff_t *of
     }
 }
 ```
-Ý tưởng: Random một số sau đó tách từng chữ số đưa vào chuỗi **buffer**.
-Đầu vào là chuỗi **buffer**, độ dài **len** được gửi từ ứng dụng ở **User Space**.
-Hàm ```get_random_bytes(&randomNumber, sizeof(char));``` dùng để random số có kích thước là **sizeof(char)** được lưu vào biến **randomNumber**.
-
- 
+Ý tưởng: Random một số sau đó tách từng chữ số đưa vào chuỗi **buffer**.   
+Đầu vào là chuỗi **buffer**, độ dài **len** được gửi từ ứng dụng ở **User Space**.    
+Đầu ra là chuỗi chứa các chữ số, chúng ta có thể chuyển thành số thông qua hàm **atoi**.     
+Hàm ```get_random_bytes(&randomNumber, sizeof(char));``` dùng để random số có kích thước là **sizeof(char)** được lưu vào biến **randomNumber**.  
